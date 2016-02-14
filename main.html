@@ -1,0 +1,50 @@
+<html ng-app="einfugen">
+
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/hightlight/default.css">
+  <title>Window A</title>
+</head>
+
+<body ng-controller="EinfugenController as pastes">
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8">
+      <h1>einfugen pasteMe</h1>
+      <p>Add new items anytime. One minute and its saved and never forgotten until you want it to.</p>
+      <p style="-webkit-user-select: text">Enter what you want, select the type of content</p>
+
+
+    </div>
+    {{ pastes.pasteField }}
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="form-group">
+          <label for="comment"></label>
+          <textarea class="form-control" ng-model="pastes.pasteField" placeholder="Paste here what you dont want to forget" rows="5" id="comment"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <button type="button" class="btn btn-default" ng-click="pastes.addPaste()">save!</button>
+      </div>
+    </div>
+
+    <div class="row" ng-repeat="onePaste in pastes.pasteArray">
+      <div class="col-xs-offset-2 col-xs-8">
+    <pre><code class="html">{{ onePaste.text }}</code></pre>
+      </div>
+    </div>
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+
+
+    <script src="js/highlight.pack.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+
+</html>
