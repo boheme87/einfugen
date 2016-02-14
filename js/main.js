@@ -56,11 +56,12 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
 chrome.runtime.onInstalled.addListener(function() {
   // When the app gets installed, set up the context menus
   setUpContextMenus();
+  
 });
 
 chrome.contextMenus.onClicked.addListener(function(itemData) {
   if (itemData.menuItemId == "launcher0")
-    chrome.app.window.create('a.html', {
+    chrome.app.window.create('main.html', {
       id: 'a',
       outerBounds: {
         top: 0,

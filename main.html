@@ -31,6 +31,13 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <button type="button" class="btn btn-default" ng-click="pastes.fillFromSync()">get!</button>
+      </div>
+    </div>
+
+
     <div class="row" ng-repeat="onePaste in pastes.pasteArray">
       <div class="col-xs-offset-2 col-xs-8">
     <pre><code class="html">{{ onePaste.text }}</code></pre>

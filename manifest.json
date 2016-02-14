@@ -7,5 +7,5 @@
       "scripts": ["js/main.js"]
     }
   },
-  "permissions": ["contextMenus"]
+  "permissions": ["contextMenus", "storage"]
 }
